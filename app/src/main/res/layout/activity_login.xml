@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradiente3"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
 
     <ScrollView
@@ -38,14 +38,14 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_user"
+                android:id="@+id/til_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:textColorHint="#fff">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_user"
+                    android:id="@+id/input_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/user"
