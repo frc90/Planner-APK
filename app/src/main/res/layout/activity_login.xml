@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradiente3"
-    android:padding="16dp"
+    android:gravity="center"
+    android:padding="10dp"
     tools:context=".LoginActivity">
 
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
+        android:layout_height="wrap_content"
         tools:ignore="UselessParent">
 
         <androidx.cardview.widget.CardView
@@ -20,8 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             app:cardBackgroundColor="@color/cardBackground"
-            app:cardCornerRadius="40dp"
-            app:cardElevation="5dp">
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,38 +46,66 @@
                     android:textStyle="italic|bold"
                     android:typeface="serif" />
 
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/til_email"
-                    android:layout_width="300sp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:textColorHint="#fff">
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/input_email"
-                        android:layout_width="300sp"
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:srcCompat="@drawable/ic_person_outline" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_email"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/email"
-                        android:inputType="textPersonName" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:textColorHint="#fff">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/til_pass"
-                    android:layout_width="300sp"
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/email"
+                            android:inputType="textPersonName" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:textColorHint="#fff">
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/input_pass"
-                        android:layout_width="300sp"
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:srcCompat="@drawable/ic_lock_outline" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_pass"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/pass"
-                        android:inputType="textPassword" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:textColorHint="#fff">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_pass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pass"
+                            android:inputType="textPassword"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="5" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
 
                 <CheckBox
                     android:id="@+id/cb_remember_me"
@@ -99,6 +127,7 @@
                     android:background="@drawable/btn_login"
                     android:text="@string/login"
                     android:textColor="@drawable/btn_txt_login" />
+
 
             </LinearLayout>
 
