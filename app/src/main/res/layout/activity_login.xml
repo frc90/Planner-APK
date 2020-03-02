@@ -92,7 +92,9 @@
                         android:id="@+id/til_pass"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColorHint="#fff">
+                        android:layout_weight="8"
+                        android:textColorHint="#fff"
+                        app:passwordToggleEnabled="true">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/input_pass"
@@ -103,6 +105,7 @@
                             app:counterEnabled="true"
                             app:counterMaxLength="5" />
                     </com.google.android.material.textfield.TextInputLayout>
+
 
                 </LinearLayout>
 
