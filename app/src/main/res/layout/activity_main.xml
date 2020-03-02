@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
     android:background="@drawable/gradiente3"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:padding="10dp"
+    tools:context=".Activities.MainActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -16,14 +16,58 @@
         app:cardBackgroundColor="@color/cardBackground"
         app:cardCornerRadius="20dp"
         app:cardElevation="5dp"
-        app:cardMaxElevation="15dp"
-        >
+        app:cardMaxElevation="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/btn_placeHolderApi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_login"
+                    android:onClick="getPosts"
+                    android:text="Api Post"
+                    android:textColor="@drawable/btn_txt_login" />
+
+                <Button
+                    android:id="@+id/btn_larablogTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_login"
+                    android:onClick="getUsers"
+                    android:text="LaraBlog"
+                    android:textColor="@drawable/btn_txt_login" />
+            </LinearLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000" />
+                </LinearLayout>
+            </ScrollView>
         </LinearLayout>
 
 

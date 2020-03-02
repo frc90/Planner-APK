@@ -1,4 +1,4 @@
-package com.misapp.plannerapk;
+package com.misapp.plannerapk.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +14,8 @@ import android.widget.CheckBox;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.misapp.plannerapk.R;
+import com.misapp.plannerapk.Utils.Util;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -30,9 +32,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
         // enlazamos los datos con las varibles de la vista .xml
         bindUI();
+
+        // si el checkbox esta activo y tiene datos el sharedpreferences
+
 
         // crea el sharedpreferences en modo privado
         prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
@@ -52,6 +56,9 @@ public class LoginActivity extends AppCompatActivity {
                 if (login(email, password)) {
                     goToMain();
                     saveOnPreferences(email, password);
+                    if (!cb_remember_me.isChecked()) {
+                        prefs.edit().clear().apply();
+                    }
                 }
             }
         });
@@ -117,21 +124,12 @@ public class LoginActivity extends AppCompatActivity {
 
     // setCredentialsIfExits
     private void setCredentialsIfExits() {
-        String email = getUserMailPrefs();
-        String password = getUserMailPassword();
+        String email = Util.getUserMailPrefs(prefs);
+        String password = Util.getUserMailPassword(prefs);
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
             input_email.setText(email);
             input_pass.setText(password);
+            cb_remember_me.setChecked(true); // si hay valores en el sharedpreferences cambia a estado check
         }
     }
-
-    // traer datos del sharedpreferences
-    private String getUserMailPrefs() {
-        return prefs.getString("email", "");
-    }
-
-    private String getUserMailPassword() {
-        return prefs.getString("password", "");
-    }
-
 }

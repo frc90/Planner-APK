@@ -7,7 +7,7 @@
     android:background="@drawable/gradiente3"
     android:gravity="center"
     android:padding="10dp"
-    tools:context=".LoginActivity">
+    tools:context=".Activities.LoginActivity">
 
 
     <ScrollView
