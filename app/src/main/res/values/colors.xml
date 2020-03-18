@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#004085</color>
+    <color name="colorPrimary">#00C9AB</color>
+    <color name="colorPrimaryLight">#97FCED</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorWord">#2C343D</color>
+    <color name="colorWordLight">#92989E</color>
     <color name="btn_login_color">#03A9F4</color>
-    <color name="cardBackground">#2A4D74</color>
+    <color name="cardBackground">#2CA7E0</color>
 </resources>

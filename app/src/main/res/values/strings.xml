@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PlannerAPK</string>
+    <string name="app_name">Planner</string>
     <string name="email">Correo</string>
     <string name="pass">Contraseña</string>
     <string name="remember_me">Recuérdame</string>
@@ -7,4 +7,5 @@
     <string name="logo">logo</string>
     <string name="exit">Salir</string>
     <string name="exit_forget">Salir y olvidar</string>
+    <string name="activities">Actividades</string>
 </resources>

@@ -173,4 +173,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    // change of activities
+    public void change(View v) {
+        Intent intent = new Intent(MainActivity.this, ActivitiesActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

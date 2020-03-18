@@ -47,6 +47,17 @@
                     android:onClick="getUsers"
                     android:text="LaraBlog"
                     android:textColor="@drawable/btn_txt_login" />
+
+                <Button
+                    android:id="@+id/btn_activities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_login"
+                    android:onClick="change"
+                    android:text="Change"
+                    android:textColor="@drawable/btn_txt_login" />
             </LinearLayout>
 
 
